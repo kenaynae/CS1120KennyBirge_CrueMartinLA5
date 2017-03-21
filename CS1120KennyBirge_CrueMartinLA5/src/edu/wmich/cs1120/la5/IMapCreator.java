@@ -8,4 +8,6 @@ public interface IMapCreator {
 	//terrain for the object of TerrainScanner
 	TerrainScanner getScanner();
 	void setScanner(TerrainScanner scanner);
+	
+	
 }
