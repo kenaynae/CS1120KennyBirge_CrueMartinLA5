@@ -40,7 +40,7 @@ public class MapCreatorFromTxt implements IMapCreator {
 						}
 						
 						else{
-							System.out.println(i + " " + j);
+							
 							area[i][j]= new LowArea();
 							
 							area[i][j].setBasicEnergyCost(cost);
