@@ -7,6 +7,12 @@ public class MapCreatorFromDat implements IMapCreator {
 	private TerrainScanner terrain = new TerrainScanner();
 	private Area[][] area;
 
+	/**
+	 * This method takes the input file and sets the Area[][] with the corresponding Areas with correct elevation, radiation, and energy
+	 * 
+	 * @param fileName the name of the file we are reading from
+	 * @param threshold the threshold for what is a passable area
+	 */
 	public void scanTerrain(String fileName, int threshold) throws IOException {
 		terrain = new TerrainScanner();
 		this.area = new Area[10][10];
@@ -50,10 +56,20 @@ public class MapCreatorFromDat implements IMapCreator {
 		terrain.setTerrain(area);
 	}
 
+	/**
+	 * This is the getter for the terrain field
+	 * 
+	 * @return terrain this is the TerrainScanner object used in the scanTerrain method
+	 */
 	public TerrainScanner getScanner() {
 		return terrain;
 	}
 
+	/**
+	 * This is the setter for the terrain field
+	 * 
+	 * @return terrain this is the TerrainScanner object used in the scanTerrain method
+	 */
 	public void setScanner(TerrainScanner scanner) {
 		terrain = scanner;
 	}
